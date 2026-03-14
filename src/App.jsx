@@ -29,8 +29,8 @@ function App() {
         );
         setData(response.data);
       } catch  {
-        console.log("failed to fetch data");
-      }
+  alert("Failed to fetch data");
+}
     };
     fetchData();
   }, []);
