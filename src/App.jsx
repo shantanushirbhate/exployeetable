@@ -28,8 +28,8 @@ function App() {
           "https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json"
         );
         setData(response.data);
-      } catch (error) {
-        console.log("failed to fetch data", error);
+      } catch  {
+        console.log("failed to fetch data");
       }
     };
     fetchData();
@@ -64,13 +64,13 @@ function App() {
       </div>
 
       <div className="pagination">
-        <button onClick={handlePrevious} disabled={page === 1}>
+        <button onClick={handlePrevious} >
           Previous
         </button>
 
         <span>Page {page}</span>
 
-        <button onClick={handleNext} disabled={page === totalPages}>
+        <button onClick={handleNext} >
           Next
         </button>
       </div>
